@@ -1,0 +1,41 @@
+﻿<Window x:Class="DataCompare.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:self="clr-namespace:DataCompare"
+        Title="{StaticResource ProgramTitle}" Height="500" Width="900">
+    
+    <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TreeView Name="treeViewLeft" Grid.Row="0" Grid.Column="0" VerticalContentAlignment="Stretch">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type self:SourceReference}" ItemsSource="{Binding Items}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+            <Button Grid.Row="1" Grid.Column="0">Add Reference</Button>
+            <GridSplitter Grid.Row="0" Grid.Column="1" Margin="2,2,2,2"
+            Width="2"
+                VerticalAlignment="Stretch" 
+                HorizontalAlignment="Center" />
+            <TreeView Grid.Row="0" Grid.Column="2" Name="treeViewRight">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate DataType="{x:Type self:SourceReference}" ItemsSource="{Binding Items}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+            <Button Grid.Row="1" Grid.Column="2">Add Reference</Button>
+        </Grid>
+    </Border>
+    
+</Window>

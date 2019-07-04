@@ -1,0 +1,11 @@
+﻿<Application x:Class="DataCompare.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DataCompare"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             DispatcherUnhandledException="Application_DispatcherUnhandledException"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <sys:String x:Key="ProgramTitle">Data Compare</sys:String>
+    </Application.Resources>
+</Application>
