@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:DataCompare"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              DispatcherUnhandledException="Application_DispatcherUnhandledException"
-             StartupUri="MainWindow.xaml">
+             StartupUri="View/MainWindow.xaml">
     <Application.Resources>
         <sys:String x:Key="ProgramTitle">Data Compare</sys:String>
     </Application.Resources>
