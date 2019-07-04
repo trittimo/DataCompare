@@ -5,18 +5,27 @@
         xmlns:control="clr-namespace:DataCompare">
     <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
         <Grid>
-            <DockPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0">
                 <Menu DockPanel.Dock="Top">
                     <MenuItem Header="_File">
                         <MenuItem Header="_New" />
                         <MenuItem Header="_Open" />
                         <MenuItem Header="_Save" />
                         <Separator />
-                        <MenuItem Header="_Exit" />
+                        <MenuItem Header="E_xit" />
+                    </MenuItem>
+                    <MenuItem Header="_Edit">
+                        <MenuItem Header="_Find" />
+                        <MenuItem Header="_Copy" />
+                        <MenuItem Header="_Paste" />
                     </MenuItem>
                 </Menu>
             </DockPanel>
-            <control:SourceReferenceControl/>
+            <control:SourceReferenceControl Grid.Row="1"/>
         </Grid>
     </Border>
     

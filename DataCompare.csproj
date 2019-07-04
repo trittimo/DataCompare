@@ -59,7 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Control\SourceReference.cs" />
+    <Compile Include="Model\Behavior.cs" />
+    <Compile Include="Model\Header.cs" />
+    <Compile Include="Model\Script.cs" />
+    <Compile Include="Model\SourceReference.cs" />
+    <Compile Include="Model\SourceReferenceItem.cs" />
     <Compile Include="View\SourceReferenceControl.xaml.cs">
       <DependentUpon>SourceReferenceControl.xaml</DependentUpon>
     </Compile>
